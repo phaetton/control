@@ -1,4 +1,13 @@
-<div class="container">
+<form [formGroup]="myForm" (ngSubmit)="submitForm()">
+  <label for="firstName">First Name:</label>
+  <input type="text" id="firstName" formControlName="firstName">
+  <!-- Otros campos del formulario -->
+
+  <button type="submit">Submit</button>
+</form>
+
+
+<!-- <div class="container">
   <div class="row p-4">
     <span>resumen</span>
     <ul>
@@ -117,10 +126,10 @@
         <tr mat-row *matRowDef="let row; columns: displayedColumnsmedeben;"></tr>
       </table>
     </div>
-  </div>
+  </div> -->
 
 
-  <!--
+<!--
         CAlendario
         <mat-form-field class="example-full-width">
           <mat-label>Choose a date</mat-label>
